@@ -27,6 +27,7 @@ var express = require('express');
 var path = require('path');
 var mysql = require('mysql');
 var cons = require('consolidate');
+var bodyParser = require('body-parser');
 var app = express();
 
 var connection = mysql.createConnection({
@@ -35,6 +36,10 @@ var connection = mysql.createConnection({
   password : '123456',
   database : 'cms'
 });
+
+app.use(bodyParser.json());
+// in latest body-parser use like below.
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // assign the swig engine to .html files
 app.engine('html', cons.swig);
@@ -46,7 +51,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'welcome to expressjs'
+    title: 'Consolidate.js'
   });
 });
 
@@ -55,6 +60,16 @@ app.get('/users', function(req, res){
     res.render('users', {
 		title: 'Users',
 		users : rows
+	});
+  });
+});
+
+app.post('/post', function(req, res){
+  connection.query('INSERT INTO "users" ("id", "name", "password") VALUES ("4", '+ req.body.name +', '+ req.body.password +')', function(err, rows){
+    res.render('user', {
+		title: 'insert',
+		name: req.body.name,
+		password: req.body.password
 	});
   });
 });
