@@ -2,6 +2,24 @@
 nodejs example
 
 #### expressjs + mysql + swig template engine
+
+### project structure
+
+#####------- public
+ 	  |----css
+ 	  	|---bootstrap.css
+ 	  |----js
+ 	  	|---jquery-1.11.3.js
+ 	  |----images
+ 	  	|---
+#####------- views
+          |---common.html
+	  |---index.html
+	  |---users.html
+	
+------- app.js
+
+
 ------------------app.js
 ##### js
 ``` javascript
