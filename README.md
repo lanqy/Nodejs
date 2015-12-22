@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'Consolidate.js'
+    title: 'welcome to expressjs'
   });
 });
 
