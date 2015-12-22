@@ -6,16 +6,16 @@ nodejs example
 ### project structure
 
 ------- public
- 	  |----css
+-----------|----css
  	  	|---bootstrap.css
- 	  |----js
- 	  	|---jquery-1.11.3.js
- 	  |----images
- 	  	|---
+-----------|----js
+----------------|---jquery-1.11.3.js
+-----------|----images
+------------------|---
 ------- views
-          |---common.html
-	  |---index.html
-	  |---users.html
+----------|---common.html
+----------|---index.html
+----------|---users.html
 	
 ------- app.js
 
