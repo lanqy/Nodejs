@@ -2,7 +2,7 @@
 nodejs example
 
 #### expressjs with mysql + swig template engine
-
+------------------app.js
 ##### js
 ``` javascript
 var express = require('express');
@@ -48,7 +48,7 @@ app.listen(3000);
 console.log('Express server listening on port 3000');
 ```
 ##### html
-
+------------------ index.html
 ``` html
 <!doctype html>
 <html>
@@ -61,6 +61,7 @@ console.log('Express server listening on port 3000');
 	</body>
 </html>
 ```
+------------------ users.html
 ``` html
 <!doctype html>
 <html>
