@@ -26,11 +26,6 @@ app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-var users = [];
-users.push({ name: 'tobi' });
-users.push({ name: 'loki' });
-users.push({ name: 'jane' });
-
 app.get('/', function(req, res){
   res.render('index', {
     title: 'Consolidate.js'
@@ -38,9 +33,11 @@ app.get('/', function(req, res){
 });
 
 app.get('/users', function(req, res){
-  res.render('users', {
-    title: 'Users',
-    users: users
+  connection.query('SELECT * FROM users', function(err, rows){
+    res.render('users', {
+		title: 'Users',
+		users : rows
+	});
   });
 });
 
