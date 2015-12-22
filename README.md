@@ -5,14 +5,14 @@ nodejs example
 
 ### project structure
 
-#####------- public
+------- public
  	  |----css
  	  	|---bootstrap.css
  	  |----js
  	  	|---jquery-1.11.3.js
  	  |----images
  	  	|---
-#####------- views
+------- views
           |---common.html
 	  |---index.html
 	  |---users.html
