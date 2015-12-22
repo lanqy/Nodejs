@@ -1,7 +1,7 @@
 # nodejs
 nodejs example
 
-#### expressjs with mysql + swig template engine
+#### expressjs + mysql + swig template engine
 ------------------app.js
 ##### js
 ``` javascript
