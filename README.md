@@ -49,7 +49,7 @@ console.log('Express server listening on port 3000');
 ```
 ##### html
 
-''' html
+``` html
 <!doctype html>
 <html>
 	<head>
@@ -60,8 +60,8 @@ console.log('Express server listening on port 3000');
 		<h1>{{ title }}</h1>
 	</body>
 </html>
-'''
-''' html
+```
+``` html
 <!doctype html>
 <html>
 	<head>
@@ -79,5 +79,5 @@ console.log('Express server listening on port 3000');
 		</ul>
 	</body>
 </html>
-'''
+```
 
