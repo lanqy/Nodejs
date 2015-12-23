@@ -65,7 +65,7 @@ app.get('/users', function(req, res){
 });
 
 app.post('/post', function(req, res){
-  connection.query('insert into users SET id=4 name="' + req.body.name + '" password="' + req.body.password + '"', function(err, rows){
+  connection.query('insert into users SET id=4, name="' + req.body.name + '", password="' + req.body.password + '"', function(err, rows){
     res.render('user', {
 		title: 'insert',
 		name: req.body.name,
