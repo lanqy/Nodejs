@@ -28,6 +28,7 @@ var path = require('path');
 var mysql = require('mysql');
 var cons = require('consolidate');
 var bodyParser = require('body-parser');
+var md5 = require('md5');
 var app = express();
 
 var connection = mysql.createConnection({
@@ -65,7 +66,7 @@ app.get('/users', function(req, res){
 });
 
 app.post('/post', function(req, res){
-  connection.query('insert into users SET id=4, name="' + req.body.name + '", password="' + req.body.password + '"', function(err, rows){
+  connection.query('insert into users SET add_time="' + new Date().getTime() + '", name="' + req.body.name + '", password="' + md5(req.body.password) + '"', function(err, rows){
     res.render('user', {
 		title: 'insert',
 		name: req.body.name,
